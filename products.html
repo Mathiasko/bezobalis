@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css" type="text/css" media="all">
+    <script src="assets/script.js" defer></script>
+</head>
+
+<body onload="getProducts()">
+    <nav>
+        <div class="burger-menu hiddenBig">
+            <input type="checkbox" class="toggler">
+            <div class="burger">
+                <div></div>
+            </div>
+            <div class="menu">
+                <div class="menu-background">
+                    <img class="absolute burgerLogo" src="assets/images/vector/logo.svg" alt="">
+                    <ul class="menu-list">
+                        <li><a href="products.html">products</a></li>
+                        <li><a href="education.html">education</a></li>
+                        <li><a href="blog.html">blog</a></li>
+                        <li><a href="about_us.html">about us</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="index.html"><img class="top-logo" src="assets/images/vector/logo.svg" alt="bezobalis logo"></a>
+        </div>
+
+        <div class="tam-desktopnav hiddenSmall">
+            <ul class="menu-list">
+                <li><a class="hoverEffect" href="products.html">products</a></li>
+                <li><a class="hoverEffect" href="education.html">lectures</a></li>
+                <li><a class="hoverEffect" href="blog.html">blog</a></li>
+                <li><a href="index.html"><img class="top-logo hoverEffectLogo" src="assets/images/vector/logo.svg"
+                            alt="bezobalis logo"></a></li>
+                <li><a class="hoverEffect" href="about_us.html">about us</a></li>
+                <li><a class="hoverEffect" href="contact.html">contact</a></li>
+                <li class="tam-hidden">cart</li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <section id="productCatalogue">
+        <section class="dRelative hPadding height90">
+            <h1 class="center dAbsolute catalogueTitle">Product Catalogue</h1>
+            <div class="catalogueAccent dAbsolute"></div>
+            <p class="dAbsolute catalogueText">
+                In BEZOBALiS we believe that the less we have the happier we become. We demonstrate <span
+                    class="bold-italic">simplicity, purity and
+                    minimalism</span> in every aspect of our lifes, whether the personal or professional. In our product
+                catalogue, you
+                will find sustainable products from our local manufacturers who share this vision with us. By your
+                purchase
+                you support local mar ket and philosophy of low-impact living. <br>
+                Ps: Consume only necessary, thank you! <br>
+                Your BEZOBALiS team.
+            </p>
+
+        </section>
+
+        <section class="accent catalogueNote hPadding ">
+            <img class="catalogueNoteImg1 hiddenSmall dAbsolute" src="assets/images/vector/nut.svg" alt="">
+            <img class="catalogueNoteImg2 hiddenSmall dAbsolute" src="assets/images/vector/panak_plant.svg" alt="">
+            <p>
+                As a Zero-Waste store, web-shop and product delivery are not part of our “support local” philosophy.
+            </p>
+            <img class="catalogueImage dAbsolute" src="assets/images/glass-jars-on-shelf.jpg" alt="">
+            <p>
+                However, you can add your items into the cart and we will prepare your purchase for you in our store
+                where
+                you can just pick them up locally. Thank you for understanding,<br>
+                BEZOBALiS team.
+            </p>
+        </section>
+
+        <section class="padTop">
+            <div class="sortProduct">
+                <h1 class="hPadding">Sort by</h1>
+                <a id="sortDiv" class="flex sortByA" href="">
+                    <p class="sortBy" onclick="activeFilter(this), updateManufacturer()">manufacturer</p>
+                </a>
+                <a id="sortDiv" class="flex sortByA" href="">
+                    <p class="sortBy" onclick="activeFilter(this), updateCategories()">category</p>
+                </a>
+            </div>
+
+            <div id="sort" class="sort">
+                
+            </div>
+
+            <div class="productsDiv" id="productsDiv"></div>
+        </section>
+    </section>
+
+    <section id="singleProduct" class="hidden ">
+        <section class="flex">
+            <img id="product-image" class="product-image" src="" alt="">
+            <div class="product-info">
+                <h1 id="priduct-name" class="priduct-name underline"></h1>
+                <h2 id="priduct-price" class="priduct-price"></h2>
+                <p id="product-manufacturer" class="product-manufacturer">Manufacturer: </p>
+                <p id="product-description" class="product-description"></p>
+                <a href="#" class="cart-buttom">Add to my cart</a>
+                <div class="product-details">
+                    <div class="materialPackage">
+                        <p onclick="updatePackage(), active(this)" class="product-packaging active">Packaging</p>
+                        <p onclick="updateMaterial(), active(this)" class="product-material">Material / Ingredients</p>
+                    </div>
+                    <p id="product-detail" class="product-detail"></p>
+                </div>
+                <h2 class="underline">About Manufacturer</h2>
+                <p id="about-manufacturer" class="about-manufacturer"></p>
+                <h2 class="underline">How to use</h2>
+                <p id="how-to-use" class="how-to-use"></p>
+                <h2 class="underline">Did you know?</h2>
+                <p id="did-you-know" class="did-you-know"></p>
+            </div>
+        </section>
+    </section>
+
+
+    <footer>
+        <div class="footerGrid">
+            <div class="table futGr1 ">
+                <div class="table-container timetable">
+                    <p class="futTit">OPENING HOURS</p>
+                    
+                    <div>Monday:</div>
+                    <div> 9:00 – 18:00 </div>
+                    <div>Tuesday:</div>
+                    <div> 9:00 – 18:00 </div>
+                    <div>Wednesday:</div>
+                    <div> 9:00 – 18:00 </div>
+                    <div>Thursday:</div>
+                    <div> 9:00 – 18:00 </div>
+                    <div>Friday:</div>
+                    <div> 9:00 – 18:00 </div>
+                    <div>Saturday:</div>
+                    <div> 8:30 – 12:30 </div>
+                    <div>Sunday:</div>
+                    <div> closed</div>
+                </div>
+            </div>
+
+            <div class="flex-center futGr2">
+                <p>FOLLOW US</p>
+                <div>
+                    <img class="footer-icon" src="assets/images/vector/fb.svg" alt="">
+                    <img class="footer-icon" src="assets/images/vector/ig.svg" alt="">
+                </div>
+            </div>
+
+            <div class="futGr3">
+                <p class="center">ADDRESS</p>
+                <p class="center padding0">J. Braneckého 8, <br>
+                    911 01 , Trenčín <br>
+                    Slovensko</p>
+            </div>
+
+            <div class="futGr4">
+                <p>CONTACT US</p>
+            </div>
+        </div>
+
+        <p class="bottom-text">©2020 BEZOBALiS | LENTiS s.r.o. | J. Braneckého 8, 91101 Trenčín | IČO: 52 246 515 |
+            Zapísaný v: Obchodnom
+            registri Okresného súdu Trenčín, oddiel: Sro, vl. č.: 37863/
+        </p>
+    </footer>
+</body>
+
+</html>

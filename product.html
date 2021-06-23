@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css" type="text/css" media="all">
+    <script src="assets/script.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div class="burger-menu hiddenBig">
+            <input type="checkbox" class="toggler">
+            <div class="burger">
+                <div></div>
+            </div>
+            <div class="menu">
+                <div class="menu-background">
+                    <img class="absolute burgerLogo" src="assets/images/vector/logo.svg" alt="">
+                    <ul class="menu-list">
+                        <li><a href="products.html">products</a></li>
+                        <li><a href="education.html">education</a></li>
+                        <li><a href="blog.html">blog</a></li>
+                        <li><a href="about_us.html">about us</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="index.html"><img class="top-logo" src="assets/images/vector/logo.svg" alt="bezobalis logo"></a>
+        </div>
+        <img class="top-logo" src="assets/images/vector/logo.svg" alt="bezobalis logo">
+    </nav>
+
+    <section class="flex">
+        <img id="product-image" class="product-image" src="" alt="">
+        <div class="product-info">
+            <h1 id="priduct-name" class="priduct-name underline"></h1>
+            <h2 id="priduct-price" class="priduct-price"></h2>
+            <p id="product-manufacturer" class="product-manufacturer">Manufacturer: </p>
+            <p id="product-description" class="product-description"></p>
+            <a href="#" class="cart-buttom">Add to my cart</a>
+            <div class="product-details">
+                <div class="materialPackage">
+                    <p onclick="updatePackage(), active(this)" class="product-packaging active">Packaging</p>
+                    <p onclick="updateMaterial(), active(this)" class="product-material">Material / Ingredients</p>
+                </div>
+                <p id="product-detail" class="product-detail"></p>
+            </div>
+            <h2 class="underline">About Manufacturer</h2>
+            <p id="about-manufacturer" class="about-manufacturer"></p>
+            <h2 class="underline">How to use</h2>
+            <p id="how-to-use" class="how-to-use"></p>
+            <h2 class="underline">Did you know?</h2>
+            <p id="did-you-know" class="did-you-know"></p>
+        </div>
+
+    </section>
+
+
+
+
+    <footer>
+        <div>
+            <p>FOLLOW US</p>
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+        <div>
+            <p>ADDRESS</p>
+            <p>J. Braneckého 8, <br>
+                911 01 , Trenčín <br>
+                Slovensko</p>
+        </div>
+        <div>
+            <p>OPENING HOURS</p>
+            <p>
+                Monday: 9:00 – 18:00
+                Tuesday: 9:00 – 18:00
+                Wednesday: 9:00 – 18:00
+                Thursday: 9:00 – 18:00
+                Friday: 9:00 – 18:00
+                Saturday: 8:30 – 12:30
+                Sunday: closed
+            </p>
+        </div>
+        <div>
+            <p>CONTACT US</p>
+        </div>
+        <p>©2020 BEZOBALiS | LENTiS s.r.o. | J. Braneckého 8, 91101 Trenčín | IČO: 52 246 515 | Zapísaný v: Obchodnom
+            registri Okresného súdu Trenčín, oddiel: Sro, vl. č.: 37863/
+        </p>
+    </footer>
+</body>
+
+</html>
